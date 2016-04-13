@@ -67,6 +67,7 @@ class CatalogController < ApplicationController
     #  (useful when user clicks "more" on a large facet and wants to navigate alphabetically across a large set of results)
     # :index_range can be an array or range of prefixes that will be used to create the navigation (note: It is case sensitive when searching values)
 
+
 #    config.add_facet_field 'format', label: 'Format'
     #config.add_facet_field 'pub_date', label: 'Publication Year', single: true
  #   config.add_facet_field 'subject_topic_facet', label: 'Topic', limit: 20, index_range: 'A'..'Z'
@@ -82,8 +83,6 @@ class CatalogController < ApplicationController
     #   :years_10 => { label: 'within 10 Years', fq: "pub_date:[#{Time.zone.now.year - 10 } TO *]" },
     #   :years_25 => { label: 'within 25 Years', fq: "pub_date:[#{Time.zone.now.year - 25 } TO *]" }
     #}
-
-
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
     # handler defaults, or have no facets.
@@ -92,6 +91,7 @@ class CatalogController < ApplicationController
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
     config.add_index_field 'title_display', label: 'Title'
+<<<<<<< 93c366e636b1d9b729e5e1deb996ccc0ef6b35bb
     #config.add_index_field 'title_vern_display', label: 'Title'
     #config.add_index_field 'author_display', label: 'Author'
     #config.add_index_field 'author_vern_display', label: 'Author'
@@ -103,7 +103,8 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field 'title_display', label: 'Title'
+
+
     #config.add_show_field 'title_vern_display', label: 'Title'
     #config.add_show_field 'subtitle_display', label: 'Subtitle'
     #config.add_show_field 'subtitle_vern_display', label: 'Subtitle'
@@ -117,7 +118,6 @@ class CatalogController < ApplicationController
     #config.add_show_field 'published_vern_display', label: 'Published'
     #config.add_show_field 'lc_callnum_display', label: 'Call number'
     #config.add_show_field 'isbn_t', label: 'ISBN'
-
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
     #
@@ -181,6 +181,7 @@ class CatalogController < ApplicationController
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
+
     #config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', label: 'relevance'
     #config.add_sort_field 'pub_date_sort desc, title_sort asc', label: 'year'
     #config.add_sort_field 'author_sort asc, title_sort asc', label: 'author'
