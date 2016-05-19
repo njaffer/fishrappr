@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 class CatalogController < ApplicationController
+
+  include BlacklightRangeLimit::ControllerOverride
   include BlacklightAdvancedSearch::Controller
 
   include Blacklight::Catalog
@@ -108,7 +110,7 @@ class CatalogController < ApplicationController
 
     config.add_facet_field 'date_issued_dt', label: 'Issue Date', helper_method: :render_date_format
     config.add_facet_field 'issue_no_t', label: 'Issue No'
-
+    config.add_facet_field 'date_issued_ymd_ti', label: 'Issue Year', range: true 
     #config.add_facet_field 'example_pivot_field', label: 'Pivot Field', :pivot => ['format', 'language_facet']
 
     #config.add_facet_field 'example_query_facet_field', label: 'Date', :query => {

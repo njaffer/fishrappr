@@ -30,6 +30,7 @@ class PageIndexer
       :issue_no_t,
       :issue_sequence,
       :date_issued_dt, 
+      :date_issued_ymd_ti,
       :issue_id_t, 
       :date_issued_link,
       :ht_namespace,
